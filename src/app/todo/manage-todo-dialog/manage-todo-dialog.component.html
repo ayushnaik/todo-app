@@ -1,0 +1,20 @@
+<div>
+  <h1 mat-dialog-title>New Todo</h1>
+  <mat-dialog-content>
+    <form>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          placeholder="Enter a Task"
+          name="content"
+          [(ngModel)]="content"
+          (ngModelChange)="validate()"
+        />
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions fxLayout="row" fxLayoutAlign="space-between none">
+    <button mat-raised-button mat-dialog-close color="warn">Cancel</button>
+    <button mat-raised-button color="primary" (click)="saveTodo()">Save</button>
+  </mat-dialog-actions>
+</div>
