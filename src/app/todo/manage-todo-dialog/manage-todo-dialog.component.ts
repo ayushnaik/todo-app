@@ -34,7 +34,7 @@ export class ManageTodoDialogComponent implements OnInit {
     if (!this.hasError) {
       const newTodo = new Todo();
       newTodo.content = this.content;
-      this.http.post("http://localhost:4000/todo", newTodo).subscribe(
+      this.http.post("https://t0do-server.herokuapp.com/todo", newTodo).subscribe(
         (resp: any) => {
           console.log(resp);
           this.dialogRef.close();
