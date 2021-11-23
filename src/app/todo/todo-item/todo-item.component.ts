@@ -18,7 +18,7 @@ export class TodoItemComponent implements OnInit {
   ngOnInit() { }
 
   updateTodoStatus(todo: Todo) {
-    this.http.put("http://localhost:4000/todo/" + todo._id, todo).subscribe(
+    this.http.put("https://t0do-server.herokuapp.com/todo/" + todo._id, todo).subscribe(
       (resp: any) => {
         this.refreshTodoList();
       },
@@ -27,7 +27,7 @@ export class TodoItemComponent implements OnInit {
   }
 
   deleteTodo(todo: Todo) {
-    this.http.delete("http://localhost:4000/todo/" + todo._id).subscribe(
+    this.http.delete("https://t0do-server.herokuapp.com/todo/" + todo._id).subscribe(
       (resp: any) => {
         console.log('Delete succesfully');
         this.refreshTodoList();
