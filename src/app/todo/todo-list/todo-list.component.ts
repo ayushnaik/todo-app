@@ -19,7 +19,7 @@ export class TodoListComponent implements OnInit {
   }
 
   fetchTodos() {
-    this.http.get("http://localhost:4000/todos").subscribe(
+    this.http.get("https://t0do-server.herokuapp.com/todos").subscribe(
       (resp: any) => {
         this.todos = resp;
       },
